@@ -17,6 +17,7 @@ import Jokes from './components/Jokes'
 import Login from './components/Login'
 import WhoAmI from './components/WhoAmI'
 import NotFound from './components/NotFound'
+import Home from './components/Home'
 
 const ExampleApp = connect(
   ({ auth }) => ({ user: auth })
@@ -26,7 +27,8 @@ const ExampleApp = connect(
       <nav>
         {user ? <WhoAmI/> : <Login/>}
       </nav>
-      {children}
+        {user ? <Home/> : <h1>Please Log In</h1>}
+
     </div>
 )
 
