@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+/* we can find a better way to handle CSS later */
 let btnStyle = {
   background: "#aae",
   height: "40px",
@@ -13,25 +14,31 @@ class StepButton extends Component {
   constructor ( props ) {
     super( props );
     this.state = {
-      isChecked: null
+      isSelected: null
     }
+
+    this._handleChange = this._handleChange.bind(this);
+
   }
 
   componentWillMount () {
-    this.setState( { isChecked: this.props.isChecked } );
+    this.setState( { isSelected: this.props.isSelected } );
   }
 
   render() {
     return (
-      <span style={btnStyle} ref="switch" checked={ this.state.isChecked } onClick={ this._handleChange } className="switch" type="checkbox"/>
+      <span style={btnStyle} onClick={ this._handleChange }>
+        {this.state.isSelected ? '1' : '0'}
+      </span>
 
     )
   }
 
   _handleChange () {
-  
-    console.log("change handled");
+    this.setState( { isSelected: !this.state.isSelected } );
   }
+
+
 
 }
 

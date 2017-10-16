@@ -10,7 +10,7 @@ class Home extends Component {
 
     var stepButtons = [];
     for(var i = 0; i < 16; i++){
-      stepButtons.push(<StepButton isChecked={ true } />)
+      stepButtons.push(<StepButton isChecked={ false } />)
     }
 
     return (
