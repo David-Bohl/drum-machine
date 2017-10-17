@@ -11,9 +11,9 @@ class StepButton extends Component {
     this._handleChange = this._handleChange.bind(this);
   }
 
-  componentWillMount () {
-    this.setState( { isSelected: this.props.isSelected } );
-  }
+  
+
+
 
   render() {
     {/* we can find a better way to handle styles later */}

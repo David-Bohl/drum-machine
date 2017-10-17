@@ -15,9 +15,7 @@ class Home extends Component {
   }
 
   componentWillMount(){
-    for(var i = 0; i < 16; i++){
-      this.stepButtons.push(<StepButton/>)
-    }
+
   }
 
   render() {
@@ -30,7 +28,10 @@ class Home extends Component {
       margin: "10px"
     };
 
+    for(var i = 0; i < 16; i++){
+      this.stepButtons.push(<StepButton key={i}/>)
 
+    }
 
     return (
       <div >
