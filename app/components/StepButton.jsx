@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
 
 /* we can find a better way to handle CSS later */
+
+let btnColor = "#aae"
+
 let btnStyle = {
-  background: "#aae",
+  background: btnColor,
   height: "40px",
   width: "40px",
   display: "inline-block",
@@ -25,6 +28,8 @@ class StepButton extends Component {
     this.setState( { isSelected: this.props.isSelected } );
   }
 
+
+
   render() {
     return (
       <span style={btnStyle} onClick={ this._handleChange }>
@@ -35,6 +40,7 @@ class StepButton extends Component {
   }
 
   _handleChange () {
+    !this.state.isSelected ? console.log('selected') : console.log('un selected');
     this.setState( { isSelected: !this.state.isSelected } );
   }
 
