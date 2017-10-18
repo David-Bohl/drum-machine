@@ -1,4 +1,4 @@
-/*template code for generic component*/
+/* template code for generic component */
 import React, { Component } from 'react'
 
 class MyClass extends Component {
