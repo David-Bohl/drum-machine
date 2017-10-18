@@ -25,7 +25,7 @@ class Home extends Component {
 
   render() {
     const saveBtnStyle = {
-      background: '#c0c',
+      background: '#aae',
       height: '40px',
       width: '40px',
       display: 'inline-block',
