@@ -1,8 +1,7 @@
-{/*template code for generic component*/}
+/*template code for generic component*/
 import React, { Component } from 'react'
 
 class MyClass extends Component {
-
   render() {
     return (
       <div>
@@ -10,7 +9,6 @@ class MyClass extends Component {
       </div>
     )
   }
-
 }
 
-export default MyClass;
+export default MyClass
