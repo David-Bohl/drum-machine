@@ -32,7 +32,7 @@ class Home extends Component {
       margin: '10px'
     }
 
-    const buttons = this.state.stepButtonStates.map((selected, i) => ({
+    const buttons = this.state.stepButtonStates.map((selected, i) => {
       return (
         <StepButton
           isSelected={this.state.stepButtonStates[i]}
@@ -41,7 +41,7 @@ class Home extends Component {
           index={i}
         />
       )
-    }))
+    })
 
     return (
       <div >
